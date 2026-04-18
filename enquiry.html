@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Enquiry</title>
+</head>
+<body>
+
+    <h2>Ask a Question</h2>
+    <p>Please fill in the form below to send us your question.</p>
+
+    <form action="#" method="post">
+
+        <!-- Name -->
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Question Category --> 
+        <label for="category">Question Type:</label><br>
+        <select >
+            <option value="general">General Question</option>
+            <option value="product">Product Question</option>
+            <option value="order">Order Question</option>
+            <option value="account">Account Question</option>
+        </select><br><br>
+
+        <!-- Question -->
+        <label for="question">Your Question:</label><br>
+        <textarea id="question" name="question" rows="5" cols="30" required></textarea><br><br>
+
+        <!-- Submit -->
+        <input type="submit" value="Send Question">
+
+    </form>
+
+</body>
+</html>
