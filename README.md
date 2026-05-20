@@ -1,8 +1,9 @@
-PROJECT OVERVIEW
+## PROJECT OVERVIEW
+
 This project is a website proposal for woolworths, designed to display an online retail experience.The website focuses on presenting products, providing easy navigation, and allowing and allowing users to enquiries through a simple form.
 The goal of this project is to demonstrate a basic web development skills using html while creating a clean and user friendly layout.
 
-OBJECTIVES
+## OBJECTIVES
 
 - To make a simple and functional retail website
 - to create an easy navigation system
