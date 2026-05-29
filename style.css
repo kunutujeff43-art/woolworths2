@@ -162,6 +162,23 @@ grid-column: 1/ -1;
     margin: 30px 0;
     font-weight: bold;
 }
+.fruit-link{
+    text-decoration: none;
+    color: black;
+  
+    padding: 15px 30px;
+   
+    font-size: 18px;
+    background-color: aliceblue;
+    transition: all 0.3s ease;
+
+}
+.fruit-link{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transform: scale(1.05);
+  
+}
 /* editing homeware */
 .homewares{
     display: grid;
@@ -185,12 +202,13 @@ grid-column: 1/ -1;
     border-radius: 5px;
     
 }
-.homeware h3 {
+.heading {
 display: flex;
 text-align: center;
 margin-bottom: 20px;
 grid-column: 1/ -1;
 }
+
 .homeware p{
     font-size: 13px;
     font-weight: bold;
@@ -211,7 +229,12 @@ grid-column: 1/ -1;
     border-radius: 10px;
     
 }
-
+.winter{
+    text-align: center;
+    font-size: 20px;
+    margin: 30px 0;
+    font-weight: bold;
+}
 .cloth img{ 
     width: 100%;
     display: block;
@@ -220,13 +243,8 @@ grid-column: 1/ -1;
     border-radius: 5px;
     
 }
-.homeware h3 {
-display: flex;
-text-align: center;
-margin-bottom: 20px;
-grid-column: 1/ -1;
-}
-.homeware p{
+
+.cloth p{
     font-size: 13px;
     font-weight: bold;
     margin-top: 10px;
