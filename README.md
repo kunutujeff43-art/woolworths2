@@ -45,3 +45,34 @@ FUTURE IMPROVEMENTS
 AUTHOR
 
 - PIONTO JEFFREY KUNUTU
+
+## changelog 
+
+### ADDED
+<!-- added fetures in the index.html -->
+
+- "W" logo inside the navigation bar in the index.html
+- 3 images inside the index.html file between the nav bar and the tables
+- Added product prices underneath product images 
+- class "woolworths-nav" on the nav tag
+<!-- added features in the product.html -->
+
+- Added 23 images in the product.html
+- Added 14 images in the fruit section, 8 images in the clothes section 
+- Added product prices underneath the product images
+- Added class "heading" on the h3 tag on homeware section
+<!-- pages/ files added -->
+- Added homeware.html 
+- Added cloth.html
+- Added fruit.html 
+
+### changed 
+<!-- features changed in the index.html -->
+
+- changed class "header " to class" header- inner"
+- changed from <h3> to <strong > on the product prices underneath the product images
+
+<!-- features changed thje product.html -->\
+
+- Removed all br tags 
+- Removed bathroom accesories section 
