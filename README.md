@@ -24,15 +24,17 @@ TECHNOLOGIES
 HOW TO RUN THE PROJECT
 
 -download this repositiory
+
 - open the folder in visual studio code
 - locate the index.html file
 - right click and open the browser or use live server
 
 PROJECT STRUCTURE
-- index.html - Main homepage
+
+- index.html -  homepage
 - products.html - page for all products
 - about.html - page about our company
-- contact.html - page for out contact details 
+- contact.html - page for out contact details
 - enquiry.html - enquiry form page
 
 FUTURE IMPROVEMENTS
@@ -46,33 +48,34 @@ AUTHOR
 
 - PIONTO JEFFREY KUNUTU
 
-## changelog 
+## changelog
 
 ### ADDED
 <!-- added fetures in the index.html -->
 
 - "W" logo inside the navigation bar in the index.html
 - 3 images inside the index.html file between the nav bar and the tables
-- Added product prices underneath product images 
+- Added product prices underneath product images
 - class "woolworths-nav" on the nav tag
 <!-- added features in the product.html -->
 
 - Added 23 images in the product.html
-- Added 14 images in the fruit section, 8 images in the clothes section 
+- Added 14 images in the fruit section, 8 images in the clothes section
 - Added product prices underneath the product images
 - Added class "heading" on the h3 tag on homeware section
 <!-- pages/ files added -->
-- Added homeware.html 
+- Added homeware.html
 - Added cloth.html
-- Added fruit.html 
+- Added fruit.html
+- Added footer on about.html
 
-### changed 
+### changed  
 <!-- features changed in the index.html -->
 
 - changed class "header " to class" header- inner"
-- changed from <h3> to <strong > on the product prices underneath the product images
+- changed from h3 tag to strong tags on the product prices underneath the product images.
 
 <!-- features changed thje product.html -->\
 
-- Removed all br tags 
-- Removed bathroom accesories section 
+- Removed all br tags.  
+- Removed bathroom accesories section.
