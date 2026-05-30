@@ -1,8 +1,10 @@
 * {
-margin: 3;
-padding: o;
-font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /*Header and navbar Section*/
 .header {
@@ -424,8 +426,64 @@ grid-column: 1/ -1;
   color: rgba(255,255,255,0.75);
 }
 
+@media (max-width: 1000px){
+  .products,
+  .fruits,
+  .homewares,
+  .clothes{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navigation ul{
+    gap: 18px;
+  }
+}
+
 @media (max-width: 600px){
+  .products,
+  .fruits,
+  .homewares,
+  .clothes{
+    grid-template-columns: 1fr;
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .product img,
+  .fruit img,
+  .homeware img,
+  .cloth img,
+  .hero img{
+    height: 200px;
+  }
+
+  .navigation{
+    padding: 10px 12px;
+    border-radius: 20px;
+    max-width: 100%;
+  }
+
+  .navigation ul{
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navigation a{
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
   .footer-row{justify-content: center;}
   .footer-bottom{flex-direction: column; text-align: center;}
+
+  /* Prevent the homepage table from overflowing on very small screens */
+  table{
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
+  }
 }
+
 
