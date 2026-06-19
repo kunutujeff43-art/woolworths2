@@ -79,3 +79,13 @@ AUTHOR
 
 - Removed all br tags.  
 - Removed bathroom accesories section.
+
+## screenshot
+![alt text](<Screenshot 1.png>)
+![alt text](<Screenshot 2-1.png>)
+![alt text](<Screenshot 3.png>)
+![alt text](<Screenshot 4.png>)
+![alt text](<Screenshot 5.png>)
+![alt text](<Screenshot 6.png>)
+![alt text](<Screenshot 7.png>)
+![alt text](<Screenshot 8.png>)

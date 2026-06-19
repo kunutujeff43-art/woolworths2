@@ -24,10 +24,31 @@
 </head>
 <body>
 
+<!-- header -->
+<header class="header woolworths-header">
+
+  <div class="header-inner">
+    <div class="header-logo">WOOLWORTHS</div>
+  </div>
+</header>
+
+
+ <div class="tabs">
+    <button onclick="window.location.href='fruit.html'" class="tab-btn">Fresh Produce</button>
+    <button onclick="window.location.href='cloth.html'" class="tab-btn ">Clothing</button>
+    <button onclick="window.location.href='homeware.html'" class="tab-btn ">Homeware</button>
+</div> 
+    <!-- <div class="tabs">
+    <button class="tab-btn active" data-tab="fruits-tab">Fresh Produce</button>
+    <button class="tab-btn" data-tab="clothes-tab">Clothing</button>
+    <button class="tab-btn" data-tab="homeware-tab">Homeware</button>
+</div> -->
+
+<section id="fruits-tab" class="tab-content active-tab">
     <section id="fruits-section" class="fruits">
 
      <h3>Fresh Produce</h3>
-
+<div class="fruit product-card">
         <div class="fruit">
 
 <img src="images/mangoes.jpg" loading="lazy" decoding="async"
@@ -35,51 +56,57 @@ class="product-image"
 data-name="Fresh Mangoes"
 data-price="R10.00 per kg"
 data-description="Sweet and juicy fresh mangoes.">
+<p><strong>R 10.00</strong></p>
         </div>
-
+</div>
+<div class="fruit product-card">
        <div class="fruit">
 <img src="images/supermarket.jpg" alt="Fresh produce selection"
 class="product-image"
 data-name="Fresh Produce Selection"
 data-price="R10.00 per kg"
 data-description="A variety of fresh fruits and vegetables.">
+<p><strong>R 10.00</strong></p>
    </div>
+</div>
 
 
 
-
-
+<div class="fruit product-card">
    <div class="fruit">
 <img src="images/james-yarema.jpg" alt="Fresh seasonal fruit display"
 class="product-image"
 data-name="Fresh Fruit Display"
 data-price="R11.00 per kg"
 data-description="Locally sourced seasonal fruit.">
+<p><strong>R 11.00</strong></p>
    </div>
+</div>
 
-
-
+<div class="fruit product-card">
    <div class="fruit">
 <img src="images/pranjall.jpg" alt="Organic fruit basket"
 class="product-image"
 data-name="Organic Fruit Basket"
 data-price="R6.99 per kg"
 data-description="Fresh organic fruit selection.">
+<p><strong>R 6.99</strong></p>
  </div>
+</div>
 
 
-
-
+<div class="fruit product-card">
   <div class="fruit">
 <img src="images/matheus-cenali.jpg" alt="Fresh crisp apples"
 class="product-image"
 data-name="Premium Apples"
 data-price="R44.99"
 data-description="Fresh crisp apples.">
+<p><strong>R 44.99</strong></p>
   </div>
+</div>
 
-
-
+<div class="fruit product-card">
   <div class="fruit"> 
  
 <img src="images/mangoes-other-fruits-counter.jpg" alt="Mixed fruit selection at the counter"
@@ -87,10 +114,12 @@ class="product-image"
 data-name="Fruit Counter Selection"
 data-price="R50.99 per kg"
 data-description="Fresh fruit available daily.">
+<p><strong>R 50.99</strong></p>
+  
  </div>
+</div>
 
-
- 
+ <div class="fruit product-card">
  <div class="fruit">
     
 <img src="images/Flavourburst-Blackberries-160-g-6009245712352.jpg" alt="black berries"
@@ -98,41 +127,72 @@ class="product-image"
 data-name="Flavourburst Blackberries"
 data-price="R51.99"
 data-description="Fresh blackberries packed with flavour.">
+ <p><strong>R 51.99</strong></p>
  </div>
+</div>
 
-
-
+<div class="fruit product-card">
  <div class="fruit">
 <img src="images/Flavourburst-Blackberries-160-g-6009245712352.jpg" alt="black berries"
 class="product-image"
 data-name="Flavourburst Blackberries"
 data-price="R51.99"
 data-description="Fresh blackberries packed with flavour.">
+ <p><strong>R 51.99</strong></p>
  </div>
+</div>
 
-
-
+<div class="fruit product-card">
  <div class="fruit">
 <img src="images/Raspberries red.jpg" alt="Fresh red raspberries"
 class="product-image"
 data-name="Fresh Raspberries"
 data-price="R57.99"
 data-description="Fresh red raspberries.">
+ <p><strong>R 57.99</strong></p>
  </div>
+</div>
 
-
-
+<div class="fruit product-card">
        <div class="fruit">
 <img src="images/max-bohme.jpg" alt="Premium fruit collection"
 class="product-image"
 data-name="Premium Fruit Collection"
 data-price="R80.99"
 data-description="A premium selection of fresh fruit.">
-
+ <p><strong>R 80.99</strong></p>
      </div>
-
+</div>
 
 </section>
+</section>
+
+<!-- Footer ) -->
+<footer class="site-footer">
+  <div class="footer-inner">
+  <div class="footer-row footer-top">
+     <div class="footer-brand">
+     <div class="footer-logo">WOOLWORTHS</div>
+        <div class="footer-tag">Woolworths Holdings Limited • Since 1931</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="enquiry.html">Enquiry</a>
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+
+    <div class="footer-row footer-bottom">
+      <div class="footer-copy">2026 Woolworths Website Proposal | Project Submission</div>
+      <div class="footer-trust">Secure Payments • Easy Returns • Nationwide Delivery</div>
+    </div>
+  </div>
+</footer>
 
 <!-- Product Modal -->
 <div id="productModal" class="modal">

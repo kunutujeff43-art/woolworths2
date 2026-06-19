@@ -45,9 +45,21 @@
 </ul>
 </nav>
 
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search products...">
+</div>
+
 <!-- Categories tabs (Woolworths-style) -->
-
-
+<div class="tabs">
+    <button onclick="window.location.href='fruit.html'" class="tab-btn">Fresh Produce</button>
+    <button onclick="window.location.href='cloth.html'" class="tab-btn ">Clothing</button>
+    <button onclick="window.location.href='homeware.html'" class="tab-btn ">Homeware</button>
+</div> 
+<!-- <div class="tabs">
+    <button class="tab-btn active" data-tab="fruits-tab">Fresh Produce</button>
+    <button class="tab-btn" data-tab="clothes-tab">Clothing</button>
+    <button class="tab-btn" data-tab="homeware-tab">Homeware</button>
+</div> -->
 
 <!-- Fruits Panel -->
 <section id="fruits-section" class="tab-panel tab-content" role="region" data-section="fruits">
@@ -59,7 +71,11 @@
 <div class="fruits">
 
     <div class="fruit">
-<img src="images/mangoes.jpg" alt="Fresh mangoes" data-lightbox="gallery" data-full="images/mangoes.jpg">
+<img src="images/mangoes.jpg" alt="Fresh mangoes" data-lightbox="gallery" data-full="images/mangoes.jpg"
+ class="product-image"
+         data-name="Mixed Fresh Fruit Basket"
+         data-price="R110.00"
+         data-description="Fresh seasonal fruits selected daily.">
       <p><strong>R 10.00</strong> per kg</p>
 
     </div>
@@ -328,6 +344,23 @@
 
 <!-- JS removed: gallery.js, tabs.js -->
 
+<div id="productModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn">&times;</span>
+
+        <h2 id="modalName"></h2>
+
+        <p id="modalPrice"></p>
+
+        <p id="modalDescription"></p>
+
+    </div>
+
+</div>
+
+<script defer src="script.js"></script>
 
 
 

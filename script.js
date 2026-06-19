@@ -63,3 +63,27 @@ window.addEventListener("click", (e) => {
     }
 
 });
+;
+
+// SEARCH FUNCTIONALITY
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function () {
+    const searchValue = this.value.toLowerCase();
+
+    const products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+        const img = product.querySelector(".product-img");
+
+        if (!img) return;
+
+        const title = img.dataset.title.toLowerCase();
+
+        if (title.includes(searchValue)) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
+        }
+    });
+});
