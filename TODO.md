@@ -1,15 +1,24 @@
-# TODO - Responsive Website
+# TODO
 
-- [x] Review `style.css` and identify non-responsive rules (grids, nav, images, table, global reset).
-- [x] Update `style.css` with a correct global reset (`box-sizing`, `margin: 0`, `padding: 0`).
-- [x] Add responsive breakpoints:
+## Phase 1: Lightbox gallery (priority)
+- [x] Add a reusable lightbox overlay + JS (open, close, ESC, next/prev)
+- [x] Mark gallery images across pages with data attributes for lightbox
+- [x] Add lightbox CSS transitions (fade/zoom)
 
-  - [ ] <= 1000px: 3-column grids -> 2 columns.
-  - [ ] <= 600px: 3-column grids -> 1 column; adjust image heights.
-- [x] Improve navigation layout on small screens (wrapping, font/padding adjustments).
-- [x] Make `index.html` table mobile-safe (CSS-based overflow handling).
 
-- [x] Ensure footer remains responsive.
-- [x] Run a quick build/test by opening pages and checking mobile/tablet/desktop widths.
+## Phase 2: Accordions
+- [ ] Add accordion component markup + accessible JS for toggle
+- [ ] Add accordion open/close animation CSS
+
+## Phase 3: Map (Leaflet)
+- [ ] Add Leaflet map container to contact page
+- [ ] Add markers for a few store locations and basic interactions
+
+## Phase 4: DOM manipulation + animations
+- [ ] Add a small interactive DOM feature (filter/sort)
+- [ ] Polish animations/transitions across components
+
+## Verification
+- [x] Manual browser checks for all pages
 
 

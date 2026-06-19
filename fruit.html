@@ -9,61 +9,134 @@
 <body>
 
     <section id="fruits-section" class="fruits">
-   
+
      <h3>Fresh Produce</h3>
 
         <div class="fruit">
-        <img src="images/mangoes.jpg" alt="mangoes" >
-       <p><strong> R 10.00</strong> per kg's </p>
-       </div>
+
+<img src="images/mangoes.jpg" alt="mangoes"
+class="product-image"
+data-name="Fresh Mangoes"
+data-price="R10.00 per kg"
+data-description="Sweet and juicy fresh mangoes.">
+        </div>
 
        <div class="fruit">
-      <img src="images/supermarket.jpg" alt="supermarket">
-        <p><strong> R 10.00</strong> per kg's</p>
+<img src="images/supermarket.jpg" alt="supermarket"
+class="product-image"
+data-name="Fresh Produce Selection"
+data-price="R10.00 per kg"
+data-description="A variety of fresh fruits and vegetables.">
    </div>
 
-   <div class="fruit">
- <img src="images/james-yarema.jpg" alt="james-yarema" >
-   <p><strong> R 11.00</strong> per kg's </p>
-   </div>
+
+
+
 
    <div class="fruit">
- <img src="images/pranjall.jpg" alt="pranjall" >
- <p><strong> R 6,99</strong>per kg's </p>
+<img src="images/james-yarema.jpg" alt="james-yarema"
+class="product-image"
+data-name="Fresh Fruit Display"
+data-price="R11.00 per kg"
+data-description="Locally sourced seasonal fruit.">
+   </div>
+
+
+
+   <div class="fruit">
+<img src="images/pranjall.jpg" alt="pranjall"
+class="product-image"
+data-name="Organic Fruit Basket"
+data-price="R6.99 per kg"
+data-description="Fresh organic fruit selection.">
  </div>
 
- <div class="fruit">
- <img src="images/matheus-cenali.jpg" alt="matheus-cenali" >
-  <p><strong> R 44.99</strong> per apple</p>
+
+
+
+  <div class="fruit">
+<img src="images/matheus-cenali.jpg" alt="matheus-cenali"
+class="product-image"
+data-name="Premium Apples"
+data-price="R44.99"
+data-description="Fresh crisp apples.">
   </div>
+
+
 
   <div class="fruit"> 
  
- <img src="images/mangoes-other-fruits-counter.jpg" alt="mangoes-other-fruits-counter" >
- <p><strong> R 50.99</strong> per kg's </p> 
+<img src="images/mangoes-other-fruits-counter.jpg" alt="mangoes-other-fruits-counter"
+class="product-image"
+data-name="Fruit Counter Selection"
+data-price="R50.99 per kg"
+data-description="Fresh fruit available daily.">
  </div>
+
+
  
  <div class="fruit">
     
-    <img src="images/Flavourburst-Blackberries-160-g-6009245712352.jpg" alt="black berries">
-    <p><strong> R 51.99</strong> per kg's </p> 
+<img src="images/Flavourburst-Blackberries-160-g-6009245712352.jpg" alt="black berries"
+class="product-image"
+data-name="Flavourburst Blackberries"
+data-price="R51.99"
+data-description="Fresh blackberries packed with flavour.">
  </div>
+
+
 
  <div class="fruit">
-<img src="images/Guavas-6-9-pk-20017071.jpg" alt="guava">
-<p><strong> R 53.99</strong> per kg's </p> 
+<img src="images/Flavourburst-Blackberries-160-g-6009245712352.jpg" alt="black berries"
+class="product-image"
+data-name="Flavourburst Blackberries"
+data-price="R51.99"
+data-description="Fresh blackberries packed with flavour.">
  </div>
+
+
 
  <div class="fruit">
-<img src="images/Raspberries red.jpg" alt="rasberies">
-<p><strong> R 57.99</strong> per kg's </p> 
+<img src="images/Raspberries red.jpg" alt="rasberies"
+class="product-image"
+data-name="Fresh Raspberries"
+data-price="R57.99"
+data-description="Fresh red raspberries.">
  </div>
 
- <div class="fruit">
-     <img src="images/max-bohme.jpg" alt="max-bohme" >
-     <p><strong> R 80.99</strong> per kg's </p> 
- </div>
 
- </section>
+
+       <div class="fruit">
+<img src="images/max-bohme.jpg" alt="max-bohme"
+class="product-image"
+data-name="Premium Fruit Collection"
+data-price="R80.99"
+data-description="A premium selection of fresh fruit.">
+
+     </div>
+
+
+</section>
+
+<!-- Product Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <img id="modalImage" src="" alt="Product Image">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+        <p id="modalPrice"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
+

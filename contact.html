@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Woolworths</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Leaflet (interactive maps) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHAz7dCq8i2uE="
+      crossorigin=""
+    />
+
 </head>
 <body>
 
@@ -51,8 +60,25 @@
 
   <section class="contact-card">
     <h3>📍 Find Us Here</h3>
-    <p>We're located in the heart of Cape Town.</p>
+    <p>We're located in the heart of Cape Town. Use the map below to explore store locations.</p>
   </section>
+
+  <section class="contact-card" style="padding-bottom: 26px;">
+    <h3>Store Locator</h3>
+
+    <div class="store-controls" aria-label="Store locator controls">
+      <label for="store-select" class="store-label">Select a store:</label>
+      <select id="store-select" class="store-select" aria-label="Select a Woolworths store">
+        <option value="">-- Choose --</option>
+      </select>
+
+      <button id="use-location" class="store-btn" type="button">Use my location</button>
+      <div id="geo-status" class="geo-status" aria-live="polite"></div>
+    </div>
+
+    <div id="map" class="map" role="application" aria-label="Interactive store map"></div>
+  </section>
+
 
   <section class="contact-card">
     <h3>📍 Visit our local stores at:</h3>
@@ -94,7 +120,190 @@
       <div class="footer-trust">Secure Payments • Easy Returns • Nationwide Delivery</div>
     </div>
   </div>
-</footer>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <script>
+    // --------- Woolworths Store Locator (Leaflet) ---------
+    document.addEventListener('DOMContentLoaded', () => {
+      const mapEl = document.getElementById('map');
+      if (!mapEl) return;
+
+      // Sample stores (for demo)
+      const stores = [
+        {
+          name: 'Woolworths — Adderley Street Centre',
+          address: 'Adderley Street Centre, Cape Town',
+          phone: '+27 21 555 8789',
+          lat: -33.9200,
+          lng: 18.4219,
+        },
+        {
+          name: 'Woolworths — Claremont',
+          address: 'Main Road, Claremont, Cape Town',
+          phone: '+27 21 555 8701',
+          lat: -33.9859,
+          lng: 18.4686,
+        },
+        {
+          name: 'Woolworths — Kenilworth',
+          address: 'Upper Kenilworth, Cape Town',
+          phone: '+27 21 555 8722',
+          lat: -33.9629,
+          lng: 18.4575,
+        },
+        {
+          name: 'Woolworths — Hout Bay',
+          address: 'Hout Bay, Cape Town',
+          phone: '+27 21 555 8733',
+          lat: -34.0017,
+          lng: 18.3542,
+        },
+        {
+          name: 'Woolworths — Camps Bay',
+          address: 'Camps Bay, Cape Town',
+          phone: '+27 21 555 8744',
+          lat: -33.9656,
+          lng: 18.3890,
+        },
+      ];
+
+      // Basic map
+      const defaultCenter = [-33.9249, 18.4241]; // Cape Town
+      const map = L.map('map').setView(defaultCenter, 11);
+
+      // Tiles (OpenStreetMap)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      // Marker icons (Leaflet default)
+      const markers = [];
+      const markerByName = new Map();
+
+      const popupHtml = (s) => `
+        <div style="min-width: 220px;">
+          <strong>${s.name}</strong>
+          <div style="margin-top:6px; line-height:1.3;">${s.address}</div>
+          <div style="margin-top:8px;">
+            <a href="tel:${s.phone.replace(/\s+/g, '')}" style="color:#0f5c57; font-weight:700;">${s.phone}</a>
+          </div>
+        </div>
+      `;
+
+      const bounds = [];
+      stores.forEach((s) => {
+        const marker = L.marker([s.lat, s.lng]).addTo(map);
+        marker.bindPopup(popupHtml(s));
+        markers.push(marker);
+        markerByName.set(s.name, marker);
+        bounds.push([s.lat, s.lng]);
+      });
+
+      // Fit to markers if possible
+      if (bounds.length) {
+        map.fitBounds(bounds, { padding: [20, 20] });
+      }
+
+      // Dropdown control
+      const storeSelect = document.getElementById('store-select');
+      if (storeSelect) {
+        stores.forEach((s) => {
+          const opt = document.createElement('option');
+          opt.value = s.name;
+          opt.textContent = s.name;
+          storeSelect.appendChild(opt);
+        });
+
+        storeSelect.addEventListener('change', () => {
+          const chosen = storeSelect.value;
+          const marker = markerByName.get(chosen);
+          if (!marker) return;
+          map.flyTo(marker.getLatLng(), 14);
+          marker.openPopup();
+        });
+      }
+
+      // Geolocation
+      const geoBtn = document.getElementById('use-location');
+      const statusEl = document.getElementById('geo-status');
+
+      const haversineKm = (lat1, lon1, lat2, lon2) => {
+        const R = 6371; // km
+        const toRad = (d) => (d * Math.PI) / 180;
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
+        const a =
+          Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(toRad(lat1)) *
+            Math.cos(toRad(lat2)) *
+            Math.sin(dLon / 2) *
+            Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+      };
+
+      let userMarker = null;
+
+      if (geoBtn) {
+        geoBtn.addEventListener('click', () => {
+          if (!navigator.geolocation) {
+            if (statusEl) statusEl.textContent = 'Geolocation not supported in this browser.';
+            return;
+          }
+
+          if (statusEl) statusEl.textContent = 'Finding your location...';
+
+          navigator.geolocation.getCurrentPosition(
+            (pos) => {
+              const { latitude, longitude } = pos.coords;
+              if (statusEl) statusEl.textContent = 'Location found. Showing nearest store...';
+
+              const userLatLng = [latitude, longitude];
+              map.flyTo(userLatLng, 13);
+
+              if (userMarker) userMarker.remove();
+              userMarker = L.marker(userLatLng).addTo(map);
+              userMarker.bindPopup('You are here').openPopup();
+
+              // Find nearest store
+              let nearest = null;
+              let nearestKm = Infinity;
+              for (const s of stores) {
+                const km = haversineKm(latitude, longitude, s.lat, s.lng);
+                if (km < nearestKm) {
+                  nearestKm = km;
+                  nearest = s;
+                }
+              }
+
+              if (nearest) {
+                const marker = markerByName.get(nearest.name);
+                if (marker) {
+                  marker.openPopup();
+                }
+
+                if (storeSelect) storeSelect.value = nearest.name;
+              }
+            },
+            (err) => {
+              if (statusEl)
+                statusEl.textContent =
+                  'Could not get your location. You can still use the store dropdown.';
+              console.warn('Geolocation error:', err);
+            },
+            { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 }
+          );
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
