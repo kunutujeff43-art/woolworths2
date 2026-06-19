@@ -1,0 +1,7 @@
+User-agent: *
+
+# Allow crawling of all pages (static site)
+Allow: /
+
+Sitemap: /sitemap.xml
+

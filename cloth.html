@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing | Woolworths SA</title>
     <meta name="description" content="Explore Woolworths SA clothing collections including winter wear and casual fashion deals." />
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Clothing | Woolworths SA" />
+    <meta property="og:description" content="Explore Woolworths SA clothing collections including winter wear and casual fashion deals." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="cloth.html" />
+    <meta property="og:image" content="images/Funnel-Neck-Borg-Jacket-NATURAL-511211148.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Clothing | Woolworths SA" />
+    <meta name="twitter:description" content="Explore Woolworths SA clothing collections including winter wear and casual fashion deals." />
+    <meta name="twitter:image" content="images/Funnel-Neck-Borg-Jacket-NATURAL-511211148.jpg" />
+
     <link rel="stylesheet" href="style.css">
+    <!-- Basic security: Content Security Policy (static-site) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'">
 </head>
 <body>
-    <section id="section for winter clothes" class="clothes">
+<section id="section-for-winter-clothes" class="clothes">
 
 
     <div class="cloth">
 
-<img src="images/african woman.jpg" alt="african"
+<img src="images/african woman.jpg" loading="lazy" decoding="async"
 class="product-image"
 data-name="Women's Fashion"
 data-price="R129.99"
@@ -167,7 +182,7 @@ data-description="Comfortable borg jacket in charcoal finish.">
     </div>
 </div>
 
-<script src="script.js"></script>
+<script defer src="script.js"></script>
 
 </body>
 </html>

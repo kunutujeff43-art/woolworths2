@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fresh Produce | Woolworths SA</title>
     <meta name="description" content="Shop Woolworths SA fresh produce: fruits, seasonal deals and everyday grocery favourites." />
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Fresh Produce | Woolworths SA" />
+    <meta property="og:description" content="Shop Woolworths SA fresh produce: fruits, seasonal deals and everyday favourites." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="fruit.html" />
+    <meta property="og:image" content="images/mangoes.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fresh Produce | Woolworths SA" />
+    <meta name="twitter:description" content="Shop Woolworths SA fresh produce: fruits, seasonal deals and everyday favourites." />
+    <meta name="twitter:image" content="images/mangoes.jpg" />
+
     <link rel="stylesheet" href="style.css">
+    <!-- Basic security: Content Security Policy (static-site) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'">
 </head>
 <body>
 
@@ -15,7 +30,7 @@
 
         <div class="fruit">
 
-<img src="images/mangoes.jpg" alt="mangoes"
+<img src="images/mangoes.jpg" loading="lazy" decoding="async"
 class="product-image"
 data-name="Fresh Mangoes"
 data-price="R10.00 per kg"
@@ -23,7 +38,7 @@ data-description="Sweet and juicy fresh mangoes.">
         </div>
 
        <div class="fruit">
-<img src="images/supermarket.jpg" alt="supermarket"
+<img src="images/supermarket.jpg" alt="Fresh produce selection"
 class="product-image"
 data-name="Fresh Produce Selection"
 data-price="R10.00 per kg"
@@ -35,7 +50,7 @@ data-description="A variety of fresh fruits and vegetables.">
 
 
    <div class="fruit">
-<img src="images/james-yarema.jpg" alt="james-yarema"
+<img src="images/james-yarema.jpg" alt="Fresh seasonal fruit display"
 class="product-image"
 data-name="Fresh Fruit Display"
 data-price="R11.00 per kg"
@@ -45,7 +60,7 @@ data-description="Locally sourced seasonal fruit.">
 
 
    <div class="fruit">
-<img src="images/pranjall.jpg" alt="pranjall"
+<img src="images/pranjall.jpg" alt="Organic fruit basket"
 class="product-image"
 data-name="Organic Fruit Basket"
 data-price="R6.99 per kg"
@@ -56,7 +71,7 @@ data-description="Fresh organic fruit selection.">
 
 
   <div class="fruit">
-<img src="images/matheus-cenali.jpg" alt="matheus-cenali"
+<img src="images/matheus-cenali.jpg" alt="Fresh crisp apples"
 class="product-image"
 data-name="Premium Apples"
 data-price="R44.99"
@@ -67,7 +82,7 @@ data-description="Fresh crisp apples.">
 
   <div class="fruit"> 
  
-<img src="images/mangoes-other-fruits-counter.jpg" alt="mangoes-other-fruits-counter"
+<img src="images/mangoes-other-fruits-counter.jpg" alt="Mixed fruit selection at the counter"
 class="product-image"
 data-name="Fruit Counter Selection"
 data-price="R50.99 per kg"
@@ -98,7 +113,7 @@ data-description="Fresh blackberries packed with flavour.">
 
 
  <div class="fruit">
-<img src="images/Raspberries red.jpg" alt="rasberies"
+<img src="images/Raspberries red.jpg" alt="Fresh red raspberries"
 class="product-image"
 data-name="Fresh Raspberries"
 data-price="R57.99"
@@ -108,7 +123,7 @@ data-description="Fresh red raspberries.">
 
 
        <div class="fruit">
-<img src="images/max-bohme.jpg" alt="max-bohme"
+<img src="images/max-bohme.jpg" alt="Premium fruit collection"
 class="product-image"
 data-name="Premium Fruit Collection"
 data-price="R80.99"
@@ -134,7 +149,7 @@ data-description="A premium selection of fresh fruit.">
     </div>
 </div>
 
-<script src="script.js"></script>
+<script defer src="script.js"></script>
 </body>
 </html>
 

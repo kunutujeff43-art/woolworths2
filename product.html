@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woolworths SA Products | Fresh Produce, Clothing & Homeware</title>
     <meta name="description" content="Browse Woolworths SA products: fresh produce deals, winter clothing and homeware specials. Filter and view product details." />
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Woolworths SA Products" />
+    <meta property="og:description" content="Browse fresh produce deals, winter clothing and homeware specials." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="product.html" />
+    <meta property="og:image" content="images/supermarket.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Woolworths SA Products" />
+    <meta name="twitter:description" content="Browse fresh produce deals, winter clothing and homeware specials." />
+    <meta name="twitter:image" content="images/supermarket.jpg" />
+
     <link rel="stylesheet" href="style.css">
+    <!-- Basic security: Content Security Policy (static-site) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'">
 </head>
 <body>
 
@@ -24,7 +39,7 @@
 
 
           <div class="fruit">
-    <img src="images/heap-ripe.jpg"
+<img src="images/heap-ripe.jpg" loading="lazy" decoding="async"
          alt="ripe"
          class="product-image"
          data-name="Mixed Fresh Fruit Basket"
@@ -144,7 +159,7 @@ data-description="Exotic dragon fruit with a refreshing taste.">
 </div>
 
 
-    <a href=" fruit.html#fruits-section " class="fruit-link"> Fruits section</a>
+<a href="fruit.html#fruits-section" class="fruit-link">Fruits section</a>
 
 
 </div>
@@ -185,7 +200,7 @@ data-price="R499.99"
 data-description="Comfortable clothing for everyday winter use.">
           </div>
 
-          <a href="cloth.html#section for winter clothes" class="fruit-link">winter clothes </a>
+<a href="cloth.html#section-for-winter-clothes" class="fruit-link">Winter clothes</a>
         </div>
       </section>
     </section>
@@ -223,7 +238,7 @@ data-price="R660.99"
 data-description="Premium bedding set for a comfortable sleep.">
          
         </div>
-<a href="homeware.html#section for homeware" class="fruit-link"><strong> Homeware </strong></a>
+<a href="homeware.html#section-for-homeware" class="fruit-link"><strong>Homeware</strong></a>
         </div>
       </section>
     </section>
@@ -244,6 +259,6 @@ data-description="Premium bedding set for a comfortable sleep.">
 
 </div>
 
-<script src="script.js"></script>
+<script defer src="script.js"></script>
 </body>
 </html>

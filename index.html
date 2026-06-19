@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woolworths SA | Online Shopping for Food, Clothing & Homeware</title>
     <meta name="description" content="Shop Woolworths SA online for fresh produce, clothing, homeware and more. Explore deals, categories and offers in South Africa." />
-    <link rel=" stylesheet" href="style.css">
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Woolworths SA" />
+    <meta property="og:description" content="Shop Woolworths SA online for fresh produce, clothing and homeware." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="images/supermarket-banner-with-food.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Woolworths SA" />
+    <meta name="twitter:description" content="Shop Woolworths SA online for fresh produce, clothing and homeware." />
+    <meta name="twitter:image" content="images/supermarket-banner-with-food.jpg" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Basic security: Content Security Policy (static-site) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https: 'unsafe-inline'; object-src 'none'; base-uri 'self'">
 </head>
 <body>
 
 <header class="header woolworths-header">
+
   <div class="header-inner">
     <div class="header-logo">WOOLWORTHS</div>
   </div>
@@ -42,45 +59,45 @@
 <div class="fruits">
 
     <div class="fruit">
-      <img src="images/mangoes.jpg" alt="mangoes" data-lightbox="gallery" data-full="images/mangoes.jpg">
+<img src="images/mangoes.jpg" alt="Fresh mangoes" data-lightbox="gallery" data-full="images/mangoes.jpg">
       <p><strong>R 10.00</strong> per kg</p>
 
     </div>
 
 
 <div class="fruit">
-      <img src="images/supermarket.jpg" alt="supermarket" data-lightbox="gallery" data-full="images/supermarket.jpg">
+<img src="images/supermarket.jpg" alt="Mixed fresh fruit and vegetable selection" data-lightbox="gallery" data-full="images/supermarket.jpg">
       <p><strong>R 10.00</strong> per kg</p>
 
     </div>
 
 
 <div class="fruit">
-      <img src="images/james-yarema.jpg" alt="james-yarema" data-lightbox="gallery" data-full="images/james-yarema.jpg">
+<img src="images/james-yarema.jpg" alt="Fresh seasonal fruit display" data-lightbox="gallery" data-full="images/james-yarema.jpg">
       <p><strong>R 11.00</strong> per kg</p>
 
     </div>
 
     <div class="fruit">
-      <img src="images/pranjall.jpg" alt="pranjall">
+<img src="images/pranjall.jpg" alt="Organic fruit basket" data-lightbox="gallery" data-full="images/pranjall.jpg">
       <p><strong>R 6.99</strong> per kg</p>
 
     </div>
 
     <div class="fruit">
-      <img src="images/matheus-cenali.jpg" alt="matheus-cenali">
+<img src="images/matheus-cenali.jpg" alt="Crisp fresh apples" data-lightbox="gallery" data-full="images/matheus-cenali.jpg">
       <p><strong>R 44.99</strong> per apple</p>
 
     </div>
 
     <div class="fruit">
-      <img src="images/Guavas-6-9-pk-20017071.jpg" alt="guava">
+<img src="images/Guavas-6-9-pk-20017071.jpg" alt="Guavas in a 6–9 pack" data-lightbox="gallery" data-full="images/Guavas-6-9-pk-20017071.jpg">
       <p><strong>R 53.99</strong> per kg</p>
 
     </div>
 
     <div class="fruit">
-      <img src="images/Raspberries red.jpg" alt="raspberries">
+<img src="images/Raspberries red.jpg" alt="Fresh red raspberries" data-lightbox="gallery" data-full="images/Raspberries red.jpg">
       <p><strong>R 57.99</strong> per kg</p>
 
     </div>
@@ -184,7 +201,7 @@
 
 
     <div class="product">
-   <img src="images/smiley-woman.jpg" alt="smiley-woman" style="cursor:pointer">
+<img src="images/smiley-woman.jpg" alt="smiley-woman" style="cursor:pointer" loading="lazy" decoding="async">
    <p> <strong>R 150.99</strong></p>
    </div>
 

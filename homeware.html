@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homeware | Woolworths SA</title>
     <meta name="description" content="Discover Woolworths SA homeware and bedding deals. Refresh your home with quality products." />
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Homeware | Woolworths SA" />
+    <meta property="og:description" content="Discover Woolworths SA homeware and bedding deals. Refresh your home with quality products." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="homeware.html" />
+    <meta property="og:image" content="images/modern-pillow.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Homeware | Woolworths SA" />
+    <meta name="twitter:description" content="Discover Woolworths SA homeware and bedding deals. Refresh your home with quality products." />
+    <meta name="twitter:image" content="images/modern-pillow.jpg" />
+
 <link rel="stylesheet" href="style.css">
+    <!-- Basic security: Content Security Policy (static-site) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'">
 </head>
 <body>
     
 
 
-<section id="bedding" class="homewares">
+<section id="section-for-homeware" class="homewares">
 
 
 
@@ -19,7 +34,7 @@
     <div class="homeware">
 
 <img
-      src="images/bedding2.jpeg"
+src="images/bedding2.jpeg" loading="lazy" decoding="async"
       alt="bedding2"
       role="button"
       tabindex="0"
@@ -139,10 +154,18 @@ data-description="Stylish living room design ideas.">
 </section>
 
 
-<section id="bathroom" class="homewares">
+<section id="bathroom" class="homewares" aria-label="Bathroom homeware">
 
     <!-- <h3>🧴Bathroon Accesories</h3> -->
 
+    <!-- Press & partnerships / Collaborate (link-earning) -->
+    <div class="press-collab">
+      <h3>Press & Partnerships</h3>
+      <p>
+        Want to feature Woolworths SA in your publication, blog, or community initiative?
+        Reach out via our <a href="contact.html">Contact page</a> and we’ll respond to partnership enquiries.
+      </p>
+    </div>
 
      <div class="homeware">
          <img src="images/birgith.jpg"
@@ -245,7 +268,7 @@ data-description="Sophisticated décor for modern homes.">
     </div>
 </div>
 
-<script src="script.js"></script>
+<script defer src="script.js"></script>
 
 </body>
 </html>

@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <title>Enquiry | Woolworths SA</title>
     <meta name="description" content="Send a question to Woolworths SA. Choose enquiry type and message us about products, orders or account support." />
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Enquiry | Woolworths SA" />
+    <meta property="og:description" content="Send a question to Woolworths SA. Products, orders and account support." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="enquiry.html" />
+    <meta property="og:image" content="images/supermarket-banner-with-food.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Enquiry | Woolworths SA" />
+    <meta name="twitter:description" content="Send a question to Woolworths SA. Products, orders and account support." />
+    <meta name="twitter:image" content="images/supermarket-banner-with-food.jpg" />
+
     <link rel="stylesheet" href="style.css">
+    <!-- Basic security: Content Security Policy (static-site) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'">
 </head>
 <body>
 
     <h2>Ask a Question</h2>
+
     <p>Please fill in the form below to send us your question.</p>
 
-    <form action="#" method="post">
+    <form action="#" method="post" autocomplete="on" id="enquiry-form" novalidate>
 
         <!-- Name -->
         <label for="name">Your Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" required autocomplete="name" autocapitalize="words">
 
         <!-- Email -->
         <label for="email">Your Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required autocomplete="email" inputmode="email">
 
         <!-- Question Category --> 
         <label for="category">Question Type:</label><br>
-        <select >
-            <option value="general">General Question</option>
-            <option value="product">Product Question</option>
-            <option value="order">Order Question</option>
-            <option value="account">Account Question</option>
+        <select name="category" id="category" aria-label="Question Type" required>
+            <option value="services">Services / Store enquiries</option>
+            <option value="products">Products</option>
+            <option value="orders">Orders</option>
+            <option value="volunteer">Volunteer</option>
+            <option value="sponsor">Sponsor</option>
         </select><br><br>
 
         <!-- Question -->
         <label for="question">Your Question:</label><br>
-        <textarea id="question" name="question" rows="5" cols="30" required></textarea><br><br>
+        <textarea id="question" name="question" rows="5" cols="30" required placeholder="Tell us what you’d like to enquire about..."></textarea><br><br>
 
         <!-- Submit -->
         <input type="submit" value="Send Question">
 
-
-      
+        <p id="enquiry-response" role="status" aria-live="polite" style="margin-top:12px; font-weight:700;"></p>
     </form>
+
 
 </body>
 </html>
